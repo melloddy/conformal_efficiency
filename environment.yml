@@ -1,0 +1,15 @@
+name: conformal_efficiency
+channels:
+  - defaults
+dependencies:
+  - numpy=1.20.1
+  - pandas=1.3.3
+  - python=3.8.2
+  - scikit-learn=0.24.2
+  - scipy=1.7.1
+  - matplotlib
+  - tqdm
+  - notebook
+  - ipykernel
+  - jupyterlab
+  - ipykernel
