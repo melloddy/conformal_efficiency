@@ -28,3 +28,11 @@ class TestUncertaintyMetrics(unittest.TestCase):
         ig = um.calcIG(arr)
         assert ig[0] == 0.5
         assert ig[1] == 1
+
+    def test_um_ent_key(self):
+        arr = np.array([0, 0.5, 1])[:,None]
+        ent = um.calcEntropy(arr)
+        assert ent[0][0] == 0 
+        assert ent[1][0] == 1
+        assert ent[2][0] == 0
+        

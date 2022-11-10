@@ -33,6 +33,19 @@ def calcVar(preds: np.ndarray):
     return np.var(preds, (2))
 
 
+def calcEntropy(arr): 
+    """
+    Calculating information entropy on the predictions
+    Expects 2D or 3D np array with dimensions:
+        1st : compounds
+        2nd : tasks (predictions of 1 out of 2 classes for binary classification)
+        3rd : repeats (optional)
+    """
+    assert len(arr.shape) == 3 or len(arr.shape) == 2
+    ent = np.array(entropy([arr, 1-arr], base=2))  
+    return ent
+
+
 def calcKL(pre_arr=None, post_arr=None):
     """
     KL divergence
